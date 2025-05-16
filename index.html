@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1><i class="ri-speed-up-line"></i> BMI Calculator</h1>
+    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <div class="main-content">
+    <div class="container" id="authContainer">
+      <h2>Login/Register</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div class="container hidden" id="bmiContainer">
+      <h2>BMI Calculator</h2>
+      <input type="number" id="height" placeholder="Height in cm" />
+      <input type="number" id="weight" placeholder="Weight in kg" />
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <p id="result"></p>
+      
+      <!-- BMI Chart -->
+      <div class="bmi-chart">
+        <h3>BMI Categories</h3>
+        <ul>
+          <li><span class="color-indicator underweight-color"></span>Underweight: less than 18.5</li>
+          <li><span class="color-indicator normal-color"></span>Normal weight: 18.5-24.9</li>
+          <li><span class="color-indicator overweight-color"></span>Overweight: 25-29.9</li>
+          <li><span class="color-indicator obese-color"></span>Obese: 30 or more</li>
+        </ul>
+      </div>
+      
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Made By :- Rutul Patel&nbsp;&nbsp;|&nbsp;&nbsp;E.No:- 24012011123</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
