@@ -1,0 +1,228 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  transition: background 0.3s, color 0.3s;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.main-content {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer styling */
+.footer {
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  transition: background 0.3s;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Dark mode styling */
+.dark {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+.dark .navbar {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.dark .footer {
+  background-color: #1e1e1e;
+}
+
+.dark .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.dark input,
+.dark button {
+  background-color: #333;
+  color: #f4f4f4;
+  border: 1px solid #555;
+}
+
+/* BMI result styling */
+.bmi-result {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.underweight { background-color: #89CFF0; color: #000; }
+.normal { background-color: #90EE90; color: #000; }
+.overweight { background-color: #FFD700; color: #000; }
+.obese { background-color: #FFA07A; color: #000; }
+
+/* BMI chart colors */
+.underweight-color { background: #89CFF0; }
+.normal-color { background: #90EE90; }
+.overweight-color { background: #FFD700; }
+.obese-color { background: #FFA07A; }
+
+/* Ensure text is visible in dark mode on colored backgrounds */
+.dark .underweight, .dark .normal, .dark .overweight, .dark .obese {
+  color: #000;
+}
+
+.bmi-chart {
+  margin-top: 20px;
+  border-top: 1px dashed #ccc;
+  padding-top: 15px;
+}
+
+.bmi-chart h3 {
+  margin-bottom: 10px;
+}
+
+.bmi-chart ul {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.bmi-chart li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color-indicator {
+  display: inline-block; 
+  width: 15px; 
+  height: 15px; 
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  margin-top: 15px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  animation: fadeIn 0.5s ease-in-out;
+}
